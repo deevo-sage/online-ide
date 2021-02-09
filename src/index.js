@@ -21,13 +21,10 @@ const App = () => {
     await axios
       .request(options)
       .then(function (response) {
-        console.log(response.data);
       })
       .catch(function (error) {
-        console.error(error);
       });
     await axios.get("https://ce.judge0.com/languages/").then((response) => {
-      console.log(response);
     });
   };
 
@@ -77,14 +74,12 @@ const Main = ({ color, setcolor, size, setsize }) => {
       await axios
         .request(options)
         .then(function (response) {
-          console.log(response.data);
           // setdata(response.data);
           seterror(response.data.stderr);
           setoutput(response.data.stdout);
           setstatus(response.data.status);
         })
         .catch(function (error) {
-          console.error(error);
         });
     }
   };
@@ -107,11 +102,9 @@ const Main = ({ color, setcolor, size, setsize }) => {
     await axios
       .request(options)
       .then(function (response) {
-        console.log(response.data);
         settoken(response.data.token);
       })
       .catch(function (error) {
-        console.error(error);
       });
   };
   useEffect(() => {
